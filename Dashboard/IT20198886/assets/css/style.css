@@ -298,6 +298,7 @@ strong {
 
 .card .card-block {
     padding: 20px;
+   
 }
 
 .card .card-block table tr {
@@ -456,6 +457,7 @@ strong {
     animation: mymove 0.8s infinite linear;
     display: inline-block;
 }
+
 
 @-webkit-keyframes mymove {
     0% {

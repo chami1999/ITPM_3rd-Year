@@ -35,6 +35,8 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/IT20198886.css">
+
 </head>
 
 <body>
@@ -113,8 +115,8 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Page Name</h5>
-                                            <p class="m-b-0">Page Description</p>
+                                            <h5 class="m-b-10">View Users & Asign Vaccine </h5>
+                                            <p class="m-b-0">You can view all new users here</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -122,9 +124,9 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.html"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Navigation</a>
+                                            <li class="breadcrumb-item"><a href="#!">Navigation </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Page Name</a>
+                                            <li class="breadcrumb-item"><a href="#!">Assign Vaccine</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -134,14 +136,80 @@
                         <!-- Page-header end -->
                         <div class="pcoded-inner-content">
                             <!-- Main-body start -->
-                            <div class="main-body">
-                                <br><br><br>
-                                    <center>              
-                                <h1>Enter Your content here</h1>
-                        </center>     
+                         
 
-                            </div>
-                          
+                    <div class="container">
+                    <div class="row">
+                    <div class="col-sm:576px">
+                      <form>
+                        <input type="text" class="textentry" />
+                      </form>
+                      </div>
+                   <div class="col-sm:576px">
+                    <div class="col">
+                    <form>
+                     <input type="submit" class="btn" value="Go">
+                     </form>
+                    </div> 
+
+                    </div>
+   
+                 </div>
+</div>
+
+                            <div class="pcoded-inner-content">
+                     <!-- Main-body start -->
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <!-- Page-body start -->
+                                    <div class="page-body">
+                                        <!-- Basic table card start -->
+                                        <div class="card">
+                                            <div class="card-header">
+                                               
+                                                <div class="card-header-right">
+                                                    <ul class="list-unstyled card-option">
+                                                        <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                        <li><i class="fa fa-minus minimize-card"></i></li>
+                                                        <li><i class="fa fa-refresh reload-card"></i></li>
+                                                        <li><i class="fa fa-trash close-card"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                     
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>ID</th>
+                                                                <th>Name</th>
+                                                                <th>Age</th>
+                                                                <th>Gender</th>
+                                                                <th>Phone</th>
+                                                                <th>Email</th>
+                                                                <th>Registered Date</th>
+                                                                <th>Vaccine Status</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>001</td>
+                                                                <td>Chami</td>
+                                                                <td>23</td>
+                                                                <td>Female</td>
+                                                                <td>0774132345</td>
+                                                                <td>cs@gmail.com</td>
+                                                                <td>03/04/22</td>
+                                                                <td>No</td>
+                                                                <td><button type="button" class="btn1">ADD</button></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
                         </div>
                     </div>
                 </div>

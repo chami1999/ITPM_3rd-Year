@@ -1,0 +1,31 @@
+
+.button{
+        font-size: 12px;
+        background-color: white;
+        color: black;     
+        border: 2px solid #000000;
+        width : 30;
+        padding: 5px 10px;
+        border-radius: 6px;
+}
+.container {
+ 
+ margin-left: 800px;
+ margin-top: 50px;
+}
+.extentry {
+        width :20;
+       
+}
+.btn1{
+        background-color:#3939ffb2;
+        color :aliceblue;
+}
+.btn{
+
+   background-color: #3939ffb2;
+   height:30px;
+   width:50px;
+   color :aliceblue;
+   text-align: center;
+}
