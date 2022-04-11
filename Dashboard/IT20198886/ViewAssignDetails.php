@@ -115,8 +115,8 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Assign For Vaccination </h5>
-                                            <p class="m-b-0">You can assign vaccine details for users</p>
+                                            <h5 class="m-b-10">View Assign Details </h5>
+                                            <p class="m-b-0">You can view all assign details here.</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -126,8 +126,9 @@
                                             </li>
                                             <li class="breadcrumb-item"><a href="#!">Assign Vaccine </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Add Vaccine</a>
+                                            <li class="breadcrumb-item"><a href="#!">View Assign Details</a>
                                             </li>
+            
                                         </ul>
                                     </div>
                                 </div>
@@ -136,77 +137,87 @@
                         <!-- Page-header end -->
                         <div class="pcoded-inner-content">
                             <!-- Main-body start -->
-                            <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Assign Details</h5>
-                                                        <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
-                                                    </div>
-                            <div class="card-block">
-                                                        <form class="form-material">
-                                                            <div class="form-group form-default">
-                                                                <input type="text" name="footer-email" class="form-control" required="">
-                                                                <span class="form-bar"></span>
-                                                                <label class="float-label">Name</label>
-                                                            </div>
-                                                            <div class="form-group form-default">
-                                                                <input type="text" name="footer-email" class="form-control" required="">
-                                                                <span class="form-bar"></span>
-                                                                <label class="float-label">Age (exa@gmail.com)</label>
-                                                            </div>
-                                                            <div class="form-group form-default">
-                                                                <input type="password" name="footer-email" class="form-control" required="">
-                                                                <span class="form-bar"></span>
-                                                                <label class="float-label">Gender</label>
-                                                            </div>
-                                                            <div class="form-group form-default">
-                                                                <input type="text" name="footer-email" class="form-control" required="" >
-                                                                <span class="form-bar"></span>
-                                                                <label class="float-label">Vaccine Type</label>
-                                                            </div>
-  
-                                                            <div class="form-group row">
-                                                                    <label class="col-sm-2 col-form-label">Dose</label>
-                                                                    <div class="col-sm-10">
-                                                                        <select name="select" class="form-control">
-                                                                            <option value="opt1"></option>
-                                                                            <option value="opt2">1st Dose</option>
-                                                                            <option value="opt3">2nd Dose</option>
-                                                                            <option value="opt4">Booster</option>
-                                                                            <
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                               
-                                                               
-                                                                <div class="form-group form-default">
-                                                                <label class="col-sm-2 col-form-label">Assign Date</label>
-                                                                 
-                                                                <span class="form-bar"></span>
-                                                               
-                                                            </div>
-                                                         
-                                                            </form>
-                                                            <div class="pcoded-inner-content">                                     
-                                                               <div class="container">
-                                                                 <div class="row">
-                                                                <div class="col-sm:576px">
-                                                                  <form>
-                                                                    <input type="submit" class="btn3" value="Confirm">
-                                                                       </form>
-                                                                    </div>
-                                                                <div class="col-sm:576px">
-                                                                  <div class="col">
-                                                                       <form>
-                                                                         <input type="submit" class="btn4" value="Clear">
-                                                                      </form>
-                                                                   </div> 
+                         
 
-                                                                  </div>
+                    <div class="container">
+                    <div class="row">
+                    <div class="col-sm:576px">
+                      <form>
+                        <input type="text" class="textentry" />
+                      </form>
+                      </div>
+                   <div class="col-sm:576px">
+                    <div class="col">
+                    <form>
+                     <input type="submit" class="btn" value="Go">
+                     </form>
+                    </div> 
+
+                    </div>
    
-                                                                </div>
-                                                              </div>
-                                                 
-                    
+                 </div>
+</div>
+
+                            <div class="pcoded-inner-content">
+                     <!-- Main-body start -->
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <!-- Page-body start -->
+                                    <div class="page-body">
+                                        <!-- Basic table card start -->
+                                        <div class="card">
+                                            <div class="card-header">
+                                               
+                                                <div class="card-header-right">
+                                                    <ul class="list-unstyled card-option">
+                                                        <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                        <li><i class="fa fa-minus minimize-card"></i></li>
+                                                        <li><i class="fa fa-refresh reload-card"></i></li>
+                                                        <li><i class="fa fa-trash close-card"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                     
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>ID</th>
+                                                                <th>Name</th>
+                                                                <th>Age</th>
+                                                                <th>Gender</th>
+                                                                <th>Vaccine Type</th>
+                                                                <th>Dose</th>
+                                                                <th>Vaccination  Date</th>
+                                                                <th>Action</th>
+                                                               
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>001</td>
+                                                                <td>Chami</td>
+                                                                <td>23</td>
+                                                                <td>Female</td>
+                                                                <td>Pfizer</td>
+                                                                <td>First Dose</td>
+                                                                <td>03/04/22</td>
+                                                                <td><button type="button" class="btn1">Manage</button><button type="button" class="btn1">Delete</button></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Warning Section Starts -->
     <!-- Older IE warning message -->
