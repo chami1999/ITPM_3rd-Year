@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -154,7 +155,7 @@
                                                                 <label class="float-label">Age (exa@gmail.com)</label>
                                                             </div>
                                                             <div class="form-group form-default">
-                                                                <input type="password" name="footer-email" class="form-control" required="">
+                                                                <input type="text" name="footer-email" class="form-control" required="">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Gender</label>
                                                             </div>
@@ -197,9 +198,9 @@
                                                             <div class="table-responsive">
                                                     <table class="table1" align="right" >
                                                         <tr>
-                                                            <td width:"50px"> <input type="submit" class="btn3" value="Confirm"></td>
+                                                            <td width:"50px"><a href="ViewAssignDetails.php"><button type="button" class="btn3">Confirm</button></a></td>
                                                             <td> 
-                                                                         <input type="submit" class="btn4" value="Clear"></td>
+                                                                          <input type="submit" class="btn4" value="Clear"></td>
                                                     </tr>
                                                     </table>
                                                    </div>
