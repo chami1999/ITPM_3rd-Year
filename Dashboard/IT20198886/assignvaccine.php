@@ -158,11 +158,19 @@
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Gender</label>
                                                             </div>
-                                                            <div class="form-group form-default">
-                                                                <input type="text" name="footer-email" class="form-control" required="" >
-                                                                <span class="form-bar"></span>
-                                                                <label class="float-label">Vaccine Type</label>
-                                                            </div>
+                                                            <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Vaccine Type</label>
+                                                                    <div class="col-sm-10">
+                                                                        <select name="select" class="form-control">
+                                                                        <option value="opt1"></option>
+                                                                            <option value="opt2">Moderna</option>
+                                                                            <option value="opt3">Pfizer</option>
+                                                                            <option value="opt4">Sinopharm</option>
+                                                                            <option value="opt5">Sputnic</option>
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
   
                                                             <div class="form-group row">
                                                                     <label class="col-sm-2 col-form-label">Dose</label>
@@ -177,35 +185,24 @@
                                                                     </div>
                                                                 </div>
                                                                
-                                                               
-                                                                <div class="form-group form-default">
-                                                                <label class="col-sm-2 col-form-label">Assign Date</label>
-                                                                 
-                                                                <span class="form-bar"></span>
-                                                               
-                                                            </div>
-                                                         
-                                                            </form>
-                                                            <div class="pcoded-inner-content">                                     
-                                                               <div class="container">
-                                                                 <div class="row">
-                                                                <div class="col-sm:576px">
-                                                                  <form>
-                                                                    <input type="submit" class="btn3" value="Confirm">
-                                                                       </form>
-                                                                    </div>
-                                                                <div class="col-sm:576px">
-                                                                  <div class="col">
-                                                                       <form>
-                                                                         <input type="submit" class="btn4" value="Clear">
-                                                                      </form>
-                                                                   </div> 
-
+                                                                <div class="form-group row">
+                                                                  <label class="col-sm-2 col-form-label" >Date</label>
+                                                                  <div class="col-sm-10">
+            <!-- <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/> -->
+                                                                 <input type="date" class="form-control datepicker" name="date">
                                                                   </div>
-   
                                                                 </div>
-                                                              </div>
-                                                 
+                                                             
+                                                         
+                                                            <div class="table-responsive">
+                                                    <table class="table1" align="right" >
+                                                        <tr>
+                                                            <td width:"50px"> <input type="submit" class="btn3" value="Confirm"></td>
+                                                            <td> 
+                                                                         <input type="submit" class="btn4" value="Clear"></td>
+                                                    </tr>
+                                                    </table>
+                                                   </div>
                     
 
     <!-- Warning Section Starts -->

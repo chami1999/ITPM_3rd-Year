@@ -8,8 +8,7 @@
         padding: 5px 10px;
         border-radius: 6px;
 }
-.container {
- 
+.container { 
  margin-left: 800px;
  margin-top: 50px;
 }
@@ -33,7 +32,7 @@
      
    background-color: #3939ffb2;  
    color :aliceblue;
-   margin-left:25px; 
+   margin-left:20px; 
    height:30px;
    width:60px;
 }
@@ -50,3 +49,6 @@ width:130px;
 color :aliceblue;
 text-align: center;
 }
+  .d1{
+          margin-left: 300px;
+  }

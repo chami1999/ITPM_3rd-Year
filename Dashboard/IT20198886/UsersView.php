@@ -1,3 +1,6 @@
+<?php
+include_once("dbconnect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -115,8 +118,8 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">View Users & Asign Vaccine </h5>
-                                            <p class="m-b-0">You can view all new users here</p>
+                                            <h5 class="m-b-10">View Users & Add Vaccine Details</h5>
+                                            <p class="m-b-0">You can view all users in here</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -124,9 +127,9 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.html"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Navigation </a>
-                                            </li>
                                             <li class="breadcrumb-item"><a href="#!">Assign Vaccine</a>
+                                            </li>
+                                            <li class="breadcrumb-item"><a href="#!">Add Vaccine</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -136,28 +139,18 @@
                         <!-- Page-header end -->
                         <div class="pcoded-inner-content">
                             <!-- Main-body start -->
-                         
-
-                    <div class="container">
-                    <div class="row">
-                    <div class="col-sm:576px">
-                      <form>
-                        <input type="text" class="textentry" />
-                      </form>
-                      </div>
-                   <div class="col-sm:576px">
-                    <div class="col">
-                    <form>
-                     <input type="submit" class="btn" value="Go">
-                     </form>
-                    </div> 
-
-                    </div>
-   
-                 </div>
-</div>
-
-                            <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <br><br><br>
+                               
+                                <div class="table-responsive">
+                                                    <table class="table1" align="right" >
+                                                        <tr>
+                                                            <td width:"50px"> <input type="text" class="textentry" /></td>
+                                                            <td> <input type="submit" class="btn" value="Go" text-align="center"></td>
+                                                    </tr>
+                                                    </table>
+                                                   </div>
+                           <div class="pcoded-inner-content">
                      <!-- Main-body start -->
                             <div class="main-body">
                                 <div class="page-wrapper">
@@ -177,7 +170,13 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                     
+
+
+
+                                            <?php
+                                                $result = mysqli_query($conn,"SELECT * FROM user_details");
+                                                ?>
+
                                                 <div class="table-responsive">
                                                     <table class="table">
                                                         <thead>
@@ -194,17 +193,27 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                        <?php
+                                                                $i=0;
+                                                                while($row = mysqli_fetch_array($result)) {
+
+                                                                    ?>
                                                             <tr>
-                                                                <td>001</td>
-                                                                <td>Chami</td>
-                                                                <td>23</td>
-                                                                <td>Female</td>
-                                                                <td>0774132345</td>
-                                                                <td>cs@gmail.com</td>
-                                                                <td>03/04/22</td>
-                                                                <td>No</td>
-                                                                <td><button type="button" class="btn1">ADD</button></td>
+                                                        
+                                                                <td><?php echo  $row["user_id"];?></td>
+                                                                <td><?php echo  $row["user_name"];?></td>
+                                                                <td><?php echo  $row["age"];?></td>
+                                                                <td><?php echo  $row["gender"];?></td>
+                                                                <td><?php echo  $row["phone"];?></td>
+                                                                <td><?php echo  $row["email"];?></td>
+                                                                <td><?php echo  $row["registered_date"];?></td>
+                                                                <td><?php echo  $row["vaccine_status"];?></td>
+                                                                <td><a href="assignvaccine.php?user_id=<?php echo $row["user_id"]; ?>"><button type="button" class="btn1">ADD</button></a></td>
                                                             </tr>
+                                                            <?php
+                                                                    $i++;
+                                                                   
+                                                                } ?>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -216,6 +225,8 @@
             </div>
         </div>
     </div>
+    
+                       
 
 
 
@@ -286,6 +297,35 @@
 <script src="assets/js/vertical-layout.min.js "></script>
 <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="assets/js/script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
