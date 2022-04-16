@@ -1,34 +1,30 @@
 <?php
 include_once("dbconnect.php");
-?>
+if(isset($_POST['btn4']))
+{
+  $id = $_POST['user_id'];
+      $name = $_POST['name'];
+      $age = $_POST['age'];
+      $gender = $_POST['gender'];
+      $vaccine_type = $_POST['vaccinetype'];
+      $dose = $_POST['dose'];
+      $vaccination_date = $_POST['vaccination_date'];
 
+    
 
-<?php
-
-// Escape user inputs for security
-$name = mysqli_real_escape_string($conn, $_REQUEST['name']);
-$age = mysqli_real_escape_string($conn, $_REQUEST['age']);
-$gender = mysqli_real_escape_string($conn, $_REQUEST['gender']);
-$vaccine_type = mysqli_real_escape_string($conn, $_REQUEST['vaccine_type']);
-$dose = mysqli_real_escape_string($conn, $_REQUEST['dose']);
-$vaccination_date = mysqli_real_escape_string($conn, $_REQUEST['vaccintion_date']);
-
-
-function phpAlert($msg) {
-    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
-}
-
-
-
-
-
+      
 // Attempt insert query execution
-$sql = "INSERT INTO vaccination_details (Name,Age,Gender,VaccineType,Dose,Date) VALUES ('$name', '$age', '$gender', '$vaccine_type', '$dose', '$vaccination_date')";
+$sql = "insert into vaccination_details(user_id,name,age,gender,vaccine_type,dose,vaccination_date) VALUES ('$id','$name','$age',' $gender','$vaccine_type',' $dose','$vaccination_date ')";
 if(mysqli_query($conn, $sql)){
-    phpAlert("Vaccine details added successfully");
-    header("Location: ./ViewAssignDetails.php");
+   
+    header("Location: ViewAssignDetails.php");
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }
+
+
+  
+}
+
 
 ?>

@@ -139,24 +139,14 @@
                             <!-- Main-body start -->
                          
 
-                    <div class="container">
-                    <div class="row">
-                    <div class="col-sm:576px">
-                      <form>
-                        <input type="text" class="textentry" />
-                      </form>
-                      </div>
-                   <div class="col-sm:576px">
-                    <div class="col">
-                    <form>
-                     <input type="submit" class="btn" value="Go">
-                     </form>
-                    </div> 
-
-                    </div>
-   
-                 </div>
-</div>
+                            <div class="table-responsive">
+                                                    <table class="table1" align="right" >
+                                                        <tr>
+                                                            <td width:"50px"> <input type="text" class="textentry" /></td>
+                                                            <td> <input type="submit" class="btn" value="Go" text-align="center"></td>
+                                                    </tr>
+                                                    </table>
+                                                   </div>
 
                             <div class="pcoded-inner-content">
                      <!-- Main-body start -->
