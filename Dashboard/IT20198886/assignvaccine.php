@@ -152,7 +152,7 @@ include_once("dbconnect.php");
                                                 while ($row1 = $result->fetch_assoc()) {
                                                     $name = $row1["user_name"];
                                                     $age = $row1["age"];
-                                
+                                                    $gender = $row1["gender"];
                                                 
                                                 ?>
                             <div class="card-block">
@@ -169,9 +169,10 @@ include_once("dbconnect.php");
                                                                 <label class="float-label">Age (exa@gmail.com)</label>
                                                             </div>
                                                             <div class="form-group form-default">
-                                                                <input type="text" name="gender" class="form-control" required="">
+                                                                <input type="text" name="gender" class="form-control" required=""value="<?php echo  $gender;?>">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Gender</label>
+                                                            
                                                             </div>
                                                             <?php
                                                 }
@@ -181,10 +182,10 @@ include_once("dbconnect.php");
                                                                     <div class="col-sm-10">
                                                                         <select name="vaccinetype" class="form-control">
                                                                         <option value="opt1" ></option>
-                                                                            <option value="opt2">Moderna</option>
-                                                                            <option value="opt3">Pfizer</option>
-                                                                            <option value="opt4">Sinopharm</option>
-                                                                            <option value="opt5">Sputnic</option>
+                                                                            <option value="Moderna">Moderna</option>
+                                                                            <option value="Pfizer">Pfizer</option>
+                                                                            <option value="Sinopharm">Sinopharm</option>
+                                                                            <option value="Sputnic">Sputnic</option>
                                                                             
                                                                         </select>
                                                                     </div>
@@ -195,9 +196,9 @@ include_once("dbconnect.php");
                                                                     <div class="col-sm-10">
                                                                         <select name="dose" class="form-control">
                                                                             <option value="opt1"></option>
-                                                                            <option value="opt2">1st Dose</option>
-                                                                            <option value="opt3">2nd Dose</option>
-                                                                            <option value="opt4">Booster</option>
+                                                                            <option value="1st Dose">1st Dose</option>
+                                                                            <option value="2nd Dose">2nd Dose</option>
+                                                                            <option value="Booster">Booster</option>
                                                                             <
                                                                         </select>
                                                                     </div>
@@ -210,12 +211,36 @@ include_once("dbconnect.php");
                                                                  <input type="date" class="form-control datepicker" name="vaccination_date">
                                                                   </div>
                                                                 </div>
-                                                             
+                                                                <script>
+    function successmsg() {
+
+        var date = document.getElementById("vaccination_date").value;
+        var varDate = new Date(date); //dd-mm-YYYY
+        var today = new Date();
+
+        if (date == "") {
+            alert("Successfully Vaccination Details Added.");
+            return true;
+        } else {
+
+
+            if (varDate >= today) {
+                alert("Successfully Vaccination Details Added.");
+                return true;
+            } else {
+                alert("Something going to wrong.");
+                return false;
+
+            }
+        }
+
+    }
+</script>
                                                          
                                                             <div class="table-responsive">
-                                                    <table class="table1" align="right" >
+                                                    <table class="table1"  align="right" >
                                                         <tr>
-                                                            <td width:"50px"><input type="submit" class="btn4" name="btn4" value="Confirm"></td>
+                                                            <td  width:"50px"><input type="submit" class="btn4" name="btn4" value="Confirm"></td>
                                                             <td> 
                                                                           <input type="submit" class="btn4" value="Clear"></td>
                                                     </tr>

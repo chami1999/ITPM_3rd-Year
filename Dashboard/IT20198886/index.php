@@ -156,7 +156,7 @@
                                                     <div class="card-block">
                                                         <div class="row align-items">
                                                             <div class="col-8">
-                                                                <h4 class="text-c-purple">$30200</h4>
+                                                                <h4 class="text-c-purple">4</h4>
                                                                 <h6 class="text-muted m-b-0">Users</h6>
                                                             </div>
                                                             <div class="col-4 text-right">
@@ -182,7 +182,7 @@
                                                     <div class="card-block">
                                                         <div class="row align-items-center">
                                                             <div class="col-8">
-                                                                <h4 class="text-c-green">290+</h4>
+                                                                <h4 class="text-c-green">15</h4>
                                                                 <h6 class="text-muted m-b-0">Staff</h6>
                                                             </div>
                                                             <div class="col-4 text-right">
@@ -207,8 +207,8 @@
                                                     <div class="card-block">
                                                         <div class="row align-items-center">
                                                             <div class="col-8">
-                                                                <h4 class="text-c-red">145</h4>
-                                                                <h6 class="text-muted m-b-0">1st Done Users</h6>
+                                                                <h4 class="text-c-red">20</h4>
+                                                                <h6 class="text-muted m-b-0">1st Dose Users</h6>
                                                             </div>
                                                             <div class="col-4 text-right">
                                                                 <i class="fa fa-calendar-check-o f-28"></i>
@@ -232,7 +232,7 @@
                                                     <div class="card-block">
                                                         <div class="row align-items-center">
                                                             <div class="col-8">
-                                                                <h4 class="text-c-blue">500</h4>
+                                                                <h4 class="text-c-blue">30</h4>
                                                                 <h6 class="text-muted m-b-0">2nd Dose Users</h6>
                                                             </div>
                                                             <div class="col-4 text-right">
@@ -284,18 +284,20 @@
                                                                     <th class="text-center">Due Date</th>
                                                                     
                                                                 </tr>
+                                                                <tr>
+                                                                <th class="text-center">Sinopharm</th>
+                                                                    <th class="text-center">20/12/22</th> 
+                                                                </tr>
+                                                                <tr>
+                                                                <th class="text-center">Sputnic</th>
+                                                                    <th class="text-center">25/02/23</th> 
+                                                                 </tr>
+                                                                 <tr>
+                                                                <th class="text-center">Pfizer</th>
+                                                                    <th class="text-center">25/01/23</th> 
+                                                                 </tr>
                                                                 </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                   
-                                                                </tr>
-                                                                <tr>
-                                                                    
-                                                                </tr>
-                                                                <tr>
-
-                                                                </tr>
-                                                                </tbody>
+                                                                
                                                             </table>
                                                            
                                                         </div>
@@ -317,11 +319,36 @@
                                                         </div>
                                                     </div>
                                                     <div class="card-block">
-                                                      
+                                                    <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                <tr>
+                                                                  
+                                                                    <th class="text-center">Vaccine Name</th>
+                                                                    <th class="text-center">Users</th>
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                <th class="text-center">Sinopharm</th>
+                                                                    <th class="text-center">10</th> 
+                                                                </tr>
+                                                                <tr>
+                                                                <th class="text-center">Sputnic</th>
+                                                                    <th class="text-center">15</th> 
+                                                                 </tr>
+                                                                 <tr>
+                                                                <th class="text-center">Pfizer</th>
+                                                                    <th class="text-center">10</th> 
+                                                                 </tr>
+                                                                </thead>
+                                                                
+                                                            </table>
+                                                           
+                                                        </div>
                                                       
                                                         </div>
                                                         <div class="text-center">
-                                                            <a href="#!" class="b-b-primary text-primary">View all Projects</a>
+                                                            <a href="#!" class="b-b-primary text-primary">View all Vaccination Deails</a>
                                                         </div>
                                                     </div>
                                                 </div>

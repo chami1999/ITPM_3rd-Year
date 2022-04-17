@@ -187,13 +187,13 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td>001</td>
-                                                                <td>Chami</td>
+                                                                <td>Chamini</td>
                                                                 <td>23</td>
                                                                 <td>Female</td>
                                                                 <td>Pfizer</td>
-                                                                <td>First Dose</td>
-                                                                <td>03/04/22</td>
-                                                                <td><button type="button" class="btn1">Manage</button><button type="button" class="btn1">Delete</button></td>
+                                                                <td>1st Dose</td>
+                                                                <td>19/04/22</td>
+                                                                <td><a href="updatevaccine_details.php"><button type="button" class="btn1">Manage</button></a><a href="index.php"><button type="button" class="btn1">Delete</button></a></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
