@@ -42,7 +42,7 @@
 <body>
     <!-- Pre-loader start -->
     <div class="theme-loader">
-        <div class="loader-track">
+        <div class="loader-track"> 
             <div class="preloader-wrapper">
                 <div class="spinner-layer spinner-blue">
                     <div class="circle-clipper left">
@@ -158,11 +158,21 @@
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Gender</label>
                                                             </div>
-                                                            <div class="form-group form-default">
-                                                                <input type="text" name="footer-email" class="form-control" required="" >
-                                                                <span class="form-bar"></span>
-                                                                <label class="float-label">Vaccine Type</label>
-                                                            </div>
+                                                            
+                                                               
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Vaccine Type</label>
+                                                                    <div class="col-sm-10">
+                                                                        <select name="vaccinetype" class="form-control">
+                                                                        <option value="opt1" ></option>
+                                                                            <option value="Moderna">Moderna</option>
+                                                                            <option value="Pfizer">Pfizer</option>
+                                                                            <option value="Sinopharm">Sinopharm</option>
+                                                                            <option value="Sputnic">Sputnic</option>
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
   
                                                             <div class="form-group row">
                                                                     <label class="col-sm-2 col-form-label">Dose</label>
@@ -178,12 +188,13 @@
                                                                 </div>
                                                                
                                                                
-                                                                <div class="form-group form-default">
-                                                                <label class="col-sm-2 col-form-label">Assign Date</label>
-                                                                 
-                                                                <span class="form-bar"></span>
-                                                               
-                                                            </div>
+                                                                <div class="form-group row">
+                                                                  <label class="col-sm-2 col-form-label" >Date</label>
+                                                                  <div class="col-sm-10">
+            <!-- <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/> -->
+                                                                 <input type="date" class="form-control datepicker" name="vaccination_date">
+                                                                  </div>
+                                                                </div>
                                                          
                                                             </form>
                                                             <div class="pcoded-inner-content">                                     

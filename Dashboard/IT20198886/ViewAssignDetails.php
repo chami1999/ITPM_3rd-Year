@@ -1,3 +1,6 @@
+<?php
+include_once("dbconnect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -169,6 +172,10 @@
                                                 </div>
                                             </div>
                                      
+                                            <?php
+                                                $result = mysqli_query($conn,"SELECT * FROM vaccination_details");
+                                                ?>
+
                                                 <div class="table-responsive">
                                                     <table class="table">
                                                         <thead>
@@ -179,22 +186,33 @@
                                                                 <th>Gender</th>
                                                                 <th>Vaccine Type</th>
                                                                 <th>Dose</th>
-                                                                <th>Vaccination  Date</th>
+                                                                <th>Vaccination Date</th>
+                                                                
                                                                 <th>Action</th>
-                                                               
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                        <?php
+                                                                $i=0;
+                                                                while($row = mysqli_fetch_array($result)) {
+
+                                                                    ?>
                                                             <tr>
-                                                                <td>001</td>
-                                                                <td>Chamini</td>
-                                                                <td>23</td>
-                                                                <td>Female</td>
-                                                                <td>Pfizer</td>
-                                                                <td>1st Dose</td>
-                                                                <td>19/04/22</td>
-                                                                <td><a href="updatevaccine_details.php"><button type="button" class="btn1">Manage</button></a><a href="index.php"><button type="button" class="btn1">Delete</button></a></td>
+                                                        
+                                                                <td><?php echo  $row["id"];?></td>
+                                                                <td><?php echo  $row["name"];?></td>
+                                                                <td><?php echo  $row["age"];?></td>
+                                                                <td><?php echo  $row["gender"];?></td>
+                                                                <td><?php echo  $row["vaccine_type"];?></td>
+                                                                <td><?php echo  $row["dose"];?></td>
+                                                                <td><?php echo  $row["vaccination_date"];?></td>
+                                                                
+                                                                <td><a href="assignvaccine.php?user_id=<?php echo $row["user_id"]; ?>"><button type="button" class="btn1">ADD</button></a></td>
                                                             </tr>
+                                                            <?php
+                                                                    $i++;
+                                                                   
+                                                                } ?>
                                                         </tbody>
                                                     </table>
                                                 </div>
