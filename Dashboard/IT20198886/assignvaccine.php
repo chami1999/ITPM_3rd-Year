@@ -208,7 +208,7 @@ include_once("dbconnect.php");
                                                                   <label class="col-sm-2 col-form-label" >Date</label>
                                                                   <div class="col-sm-10">
             <!-- <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/> -->
-                                                                 <input type="date" class="form-control datepicker"id="vaccination_date"  name="vaccination_date"required="">
+                                                                 <input type="date" class="form-control datepicker" id="vaccination_date"  name="vaccination_date"required="">
                                                                   </div>
                                                                 </div>
                                                                 <script>

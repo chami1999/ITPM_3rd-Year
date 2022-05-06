@@ -1,3 +1,6 @@
+<?php
+include_once("dbconnect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -141,29 +144,48 @@
                                                         <h5>Update Assign Details</h5>
                                                         <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
                                                     </div>
+                                                    <?php
+                                                    $user_id = $_GET['user_id'];
+                                                  
+                                                   $sql="SELECT * FROM vaccination_details where user_id='$user_id'";
+                                                $result = $conn->query($sql);
+                                                if ($row1 = $result->fetch_assoc()) {
+                                                    $name = $row1["name"];
+                                                    $age = $row1["age"];
+                                                    $gender = $row1["gender"];
+                                                
+                                                ?>
+                                               
+
                             <div class="card-block">
-                                                        <form class="form-material">
+                                                        <form class="form-material" action="update.php" method="post">
                                                             <div class="form-group form-default">
-                                                                <input type="text" name="footer-email" class="form-control" required="">
+                                                                
+                                                                <input type=hidden name="user_id" value="<?php echo  $user_id;?>">
+                                                                <input type="text" name="name"  class="form-control" required="" value="<?php echo  $name;?>">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Name</label>
                                                             </div>
                                                             <div class="form-group form-default">
-                                                                <input type="text" name="footer-email" class="form-control" required="">
+                                                                <input type="text" name="age" class="form-control" required="" value="<?php echo  $age;?>">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Age (exa@gmail.com)</label>
                                                             </div>
                                                             <div class="form-group form-default">
-                                                                <input type="password" name="footer-email" class="form-control" required="">
+                                                                <input type="text" name="gender" class="form-control" required=""value="<?php echo  $gender;?>">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Gender</label>
-                                                            </div>
                                                             
+                                                            </div>
+                                                            <?php
+                                                }
+                                                            ?>
+                                                           
                                                                
                                                                 <div class="form-group row">
                                                                     <label class="col-sm-2 col-form-label">Vaccine Type</label>
                                                                     <div class="col-sm-10">
-                                                                        <select name="vaccinetype" class="form-control">
+                                                                        <select name="vaccinetype" class="form-control"id="vaccinetype">
                                                                         <option value="opt1" ></option>
                                                                             <option value="Moderna">Moderna</option>
                                                                             <option value="Pfizer">Pfizer</option>
@@ -177,12 +199,12 @@
                                                             <div class="form-group row">
                                                                     <label class="col-sm-2 col-form-label">Dose</label>
                                                                     <div class="col-sm-10">
-                                                                        <select name="select" class="form-control">
+                                                                        <select name="select" class="form-control"id="dose">
                                                                             <option value="opt1"></option>
                                                                             <option value="opt2">1st Dose</option>
                                                                             <option value="opt3">2nd Dose</option>
                                                                             <option value="opt4">Booster</option>
-                                                                            <
+                                                                            
                                                                         </select>
                                                                     </div>
                                                                 </div>
@@ -192,32 +214,21 @@
                                                                   <label class="col-sm-2 col-form-label" >Date</label>
                                                                   <div class="col-sm-10">
             <!-- <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/> -->
-                                                                 <input type="date" class="form-control datepicker" name="vaccination_date">
+                                                                 <input type="date" class="form-control datepicker" name="vaccination_date"id="date">
                                                                   </div>
                                                                 </div>
                                                          
                                                             </form>
-                                                            <div class="pcoded-inner-content">                                     
-                                                               <div class="container">
-                                                                 <div class="row">
-                                                                <div class="col-sm:576px">
-                                                                  <form>
-                                                                    <input type="submit" class="btn3" value="Confirm">
-                                                                       </form>
-                                                                    </div>
-                                                                <div class="col-sm:576px">
-                                                                  <div class="col">
-                                                                       <form>
-                                                                         <input type="submit" class="btn4" value="Clear">
-                                                                      </form>
-                                                                   </div> 
-
-                                                                  </div>
-   
-                                                                </div>
-                                                              </div>
-                                                 
-                    
+                                                            <div class="table-responsive">
+                                                    <table class="table1"  align="right" >
+                                                        <tr>
+                                                            <td  width:"50px"><input type="submit" class="btn4" name="btn4" value="Confirm"></td>
+                                                            
+                                                            <td> <input type="submit" class="btn4" value="Clear"></td>
+                                                    </tr>
+                                                    </table>
+                                                   </div>
+                                            </form>
 
     <!-- Warning Section Starts -->
     <!-- Older IE warning message -->

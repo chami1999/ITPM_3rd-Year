@@ -175,12 +175,13 @@ include_once("dbconnect.php");
                                             <?php
                                                 $result = mysqli_query($conn,"SELECT * FROM vaccination_details");
                                                 ?>
-
+                                         
                                                 <div class="table-responsive">
                                                     <table class="table">
                                                         <thead>
                                                             <tr>
-                                                                <th>ID</th>
+                                                            <th>Assign ID</th>
+                                                                <th>User ID</th>
                                                                 <th>Name</th>
                                                                 <th>Age</th>
                                                                 <th>Gender</th>
@@ -197,9 +198,10 @@ include_once("dbconnect.php");
                                                                 while($row = mysqli_fetch_array($result)) {
 
                                                                     ?>
+                                                                       <form class="form-material" action="updatevaccine_details.php" method="post">
                                                             <tr>
-                                                        
-                                                                <td><?php echo  $row["id"];?></td>
+                                                            <td><?php echo  $row["Assign_id"];?></td>
+                                                                <td><?php echo  $row["user_id"];?></td>
                                                                 <td><?php echo  $row["name"];?></td>
                                                                 <td><?php echo  $row["age"];?></td>
                                                                 <td><?php echo  $row["gender"];?></td>
@@ -207,8 +209,9 @@ include_once("dbconnect.php");
                                                                 <td><?php echo  $row["dose"];?></td>
                                                                 <td><?php echo  $row["vaccination_date"];?></td>
                                                                 
-                                                                <td><a href="assignvaccine.php?user_id=<?php echo $row["user_id"]; ?>"><button type="button" class="btn1">ADD</button></a></td>
+                                                                <td><a href="updatevaccine_details.php?user_id=<?php echo $row["user_id"]; ?>"><button type="button" class="btn1">Manage</button></a> <a href="DeleteAssignDetails.php?user_id=<?php echo $row["user_id"]; ?>"><button type="button" class="btn1">Delete</button></td>
                                                             </tr>
+                                                            </form>
                                                             <?php
                                                                     $i++;
                                                                    
@@ -216,6 +219,7 @@ include_once("dbconnect.php");
                                                         </tbody>
                                                     </table>
                                                 </div>
+                                                           
                                             </div>
                                         </div>
                         </div>
