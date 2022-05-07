@@ -1,11 +1,70 @@
 <?php
+if(isset($_POST['btn'])){
+    require_once('F:\Xampp\htdocs\ITPM_3rdYear\TCPDF\tcpdf.php');
+    $obj_pdf = new TCPDF('P', PDF_UNIT , PDF_PAGE_FORMAT ,true,'UTF-8',false);
+    $obj_pdf->SetCreator(PDF_CREATOR);
+
+    $obj_pdf->SetTitle("BLUELINE VACCINE");
+    $obj_pdf->SetHeaderData('','',PDF_HEADER_TITLE,PDF_HEADER_STRING);
+    $obj_pdf->SetHeaderFont(array(PDF_FONT_NAME_MAIN,'',PDF_FONT_SIZE_MAIN));
+    $obj_pdf->SetFooterFont(array(PDF_FONT_NAME_DATA,'',PDF_FONT_NAME_DATA));
+
+    $obj_pdf->SetDefaultMonospacedFont('helvetica');
+    $obj_pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+    $obj_pdf->SetMargins(PDF_MARGIN_LEFT,'5',PDF_MARGIN_RIGHT);
+    $obj_pdf->SetPrintHeader(false);
+    $obj_pdf->SetPrintFooter(false);
+    $obj_pdf->SetAutoPageBreak(True,10);
+    $obj_pdf->SetFont('helvetica','',12);
+    $obj_pdf->AddPage();
+
+    $content ='';
+    $content .= '
+    
+    <div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+          
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Vaccine Type</th>
+                <th>Dose</th>
+                <th>Vaccination Date</th>
+                
+                
+            </tr>
+        </thead>
+        
+        
+ 
+   
+    
+    ';
+    
+    $content .= '</table>';
+    
+    
+    $obj_pdf->writeHTML($content);
+    
+    $obj_pdf->Output("ViewAssignDetails.php");
+
+}
+
+
+
+?>
+<?php
 include_once("dbconnect.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Mega Able bootstrap admin template by codedthemes </title>
+    <title>BLUELINE VACCINE </title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -145,12 +204,12 @@ include_once("dbconnect.php");
                             <div class="table-responsive">
                                                     <table class="table1" align="right" >
                                                         <tr>
-                                                            <td width:"50px"> <input type="text" class="textentry" /></td>
-                                                            <td> <input type="submit" class="btn" value="Go" text-align="center"></td>
+                                                            <td width:"50px"> <input type="text" class="textentry" name="search" id="search"/></td>
+                                                            <td> <input type="submit" class="btn" value="Go" text-align="center" id="go"></td>
                                                     </tr>
                                                     </table>
                                                    </div>
-
+                                                  
                             <div class="pcoded-inner-content">
                      <!-- Main-body start -->
                             <div class="main-body">
@@ -171,16 +230,19 @@ include_once("dbconnect.php");
                                                     </ul>
                                                 </div>
                                             </div>
+                                          
                                      
                                             <?php
+                                               
                                                 $result = mysqli_query($conn,"SELECT * FROM vaccination_details");
+                                            
                                                 ?>
                                          
-                                                <div class="table-responsive">
+                                                <div class="table-responsive"id="vaccinedetails">
                                                     <table class="table">
                                                         <thead>
                                                             <tr>
-                                                            <th>Assign ID</th>
+                                                          
                                                                 <th>User ID</th>
                                                                 <th>Name</th>
                                                                 <th>Age</th>
@@ -200,7 +262,7 @@ include_once("dbconnect.php");
                                                                     ?>
                                                                        <form class="form-material" action="updatevaccine_details.php" method="post">
                                                             <tr>
-                                                            <td><?php echo  $row["Assign_id"];?></td>
+                                                            
                                                                 <td><?php echo  $row["user_id"];?></td>
                                                                 <td><?php echo  $row["name"];?></td>
                                                                 <td><?php echo  $row["age"];?></td>
@@ -213,6 +275,7 @@ include_once("dbconnect.php");
                                                             </tr>
                                                             </form>
                                                             <?php
+                                                            
                                                                     $i++;
                                                                    
                                                                 } ?>
@@ -230,12 +293,12 @@ include_once("dbconnect.php");
         </div>
     </div>
      <center>
-     <form>
-                     <input type="submit" class="btn5" value="Genarate report">
+     <form method="post">
+                     <input type="submit" class="btn5" value="Genarate report" name="btn">
                      </form>
     </center>
 
-
+ 
     <!-- Warning Section Starts -->
     <!-- Older IE warning message -->
     <!--[if lt IE 10]>
@@ -303,6 +366,33 @@ include_once("dbconnect.php");
 <script src="assets/js/vertical-layout.min.js "></script>
 <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="assets/js/script.js"></script>
+
 </body>
 
 </html>
+<script>  
+      $(document).ready(function(){  
+           $('search').keyup(function(){  
+                vaccine_details($(this).val());  
+           });  
+           function vaccine_details(vaccine_type){  
+                $('vaccinedetails tr').each(function(){  
+                     var found = 'false';  
+                     $(this).each(function(){  
+                          if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)  
+                          {  
+                               found = 'true';  
+                          }  
+                     });  
+                     if(found == 'true')  
+                     {  
+                          $(this).show();  
+                     }  
+                     else  
+                     {  
+                          $(this).hide();  
+                     }  
+                });  
+           }  
+      });  
+ </script>  

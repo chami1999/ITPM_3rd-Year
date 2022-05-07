@@ -197,7 +197,7 @@ include_once("dbconnect.php");
                                                                 $i=0;
                                                                 while($row = mysqli_fetch_array($result)) {
 
-                                                                    ?>
+                                                                  ?>
                                                             <tr>
                                                         
                                                                 <td><?php echo  $row["user_id"];?></td>

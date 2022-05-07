@@ -155,6 +155,10 @@ include_once("dbconnect.php");
                                                     $gender = $row1["gender"];
                                                 
                                                 ?>
+                                                <?php
+                                                }
+                                                
+                                                ?>
                             <div class="card-block">
                                                         <form class="form-material" action="insert.php" method="post">
                                                             <div class="form-group form-default">
@@ -175,7 +179,7 @@ include_once("dbconnect.php");
                                                             
                                                             </div>
                                                             <?php
-                                                }
+                                            
                                                             ?>
                                                             <div class="form-group row">
                                                                     <label class="col-sm-2 col-form-label">Vaccine Type</label>

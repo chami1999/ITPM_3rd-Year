@@ -218,7 +218,7 @@ include_once("dbconnect.php");
                                                                   </div>
                                                                 </div>
                                                          
-                                                            </form>
+                                                            
                                                             <div class="table-responsive">
                                                     <table class="table1"  align="right" >
                                                         <tr>
