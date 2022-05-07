@@ -1,3 +1,39 @@
+<?php 
+
+include "config.php";
+
+  if (isset($_POST['submit'])) {
+
+    $first_name = $_POST['firstname'];
+
+    $last_name = $_POST['lastname'];
+
+    $email = $_POST['email'];
+
+    $password = $_POST['password'];
+
+    $gender = $_POST['gender'];
+
+    $sql = "INSERT INTO `staff`(`firstname`, `lastname`, `email`, `password`, `gender`) VALUES ('$first_name','$last_name','$email','$password','$gender')";
+
+    $result = $conn->query($sql);
+
+    if ($result == TRUE) {
+
+      echo "New record created successfully.";
+      header("Location:view.php");
+
+    }else{
+
+      echo "Error:". $sql . "<br>". $conn->error;
+
+    } 
+
+    $conn->close(); 
+
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,8 +172,54 @@
                             <!-- Main-body start -->
                             <div class="main-body">
                                 <br><br><br>
-                                    <center>              
-                                <h1>Enter Your content here</h1>
+                                    <center>    
+                                <h1>staff details Form</h1>
+                                
+<div class="container">
+<form action="" method="POST">
+<div class="form-group row">
+  <fieldset>
+
+    <legend>Staff information:</legend>
+
+    Staff name:<br>
+
+    <input type="text" name="firstname">
+
+    <br>
+
+    Join Date:<br>
+
+    <input type="Date" name="lastname">
+
+    <br>
+
+    Email:<br>
+
+    <input type="email" name="email">
+
+    <br>
+
+    Description:<br>
+
+    <input type="text" name="password">
+
+    <br>
+
+    Gender:<br>
+
+    <input type="radio" name="gender" value="Male">Male
+
+    <input type="radio" name="gender" value="Female">Female
+
+    <br><br>
+
+    <input class="btn btn-info" type="submit" name="submit" value="submit">
+
+  </fieldset>
+</div>
+</form>
+</div>
                         </center>     
 
                             </div>
