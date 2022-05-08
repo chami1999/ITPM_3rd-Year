@@ -1,8 +1,18 @@
+</php
+include_once ("dbconnect.php");
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
-    <title>Vaccine Details</title>
+
+
+    <title>Update Vaccine Details </title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -37,16 +47,18 @@
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
 
     <style>
-table, th, td {
-  border: 1px solid black;
+    .a {
+  color: black;
+  font-family: Cursive;
+  font-size: 200%;
 }
-th { background-color: lightskyblue;}
 
-.button1 {background-color: #4CAF50;} 
-
-
+.p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blue;
+    font-size: 300%;
+}
 </style>
-
 
 
 </head>
@@ -113,6 +125,7 @@ th { background-color: lightskyblue;}
             <?php
             include('Components/TopNavBar.php');
             ?>
+            
 
             <div class="pcoded-main-container">
                 <div class="pcoded-wrapper">
@@ -127,7 +140,7 @@ th { background-color: lightskyblue;}
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Vaccine Details</h5>
+                                            <h5 class="m-b-10">Update Vaccine Detsils</h5>
                                             <p class="m-b-0"></p>
                                         </div>
                                     </div>
@@ -136,9 +149,9 @@ th { background-color: lightskyblue;}
                                             <li class="breadcrumb-item">
                                                 <a href="index.html"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Home</a> 
+                                            <li class="breadcrumb-item"><a href="#!">Navigation</a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Vaccine Details</a>
+                                            <li class="breadcrumb-item"><a href="#!">Home</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -150,94 +163,77 @@ th { background-color: lightskyblue;}
                             <!-- Main-body start -->
                             <div class="main-body">
                                 <br><br><br>
-                                    <center>   
-                                        
+                                    <center>              
+                               
+                                 <div class="container">
+                                         <div class="row col-md-6 col-md-offset-3">
+                                             <div class="panel panel-primary">
+                                                    <div class="panel-heading text-center">
+                                                            <h1 class="p">Update Vaccine Details</h1>
+                                        </div>
+
+                                        <form action="UpdateVaccine.php" method="POST">
+                                    <div class="panel-body" >
+                                        <form>
+                                            <div  class="form-group">
+                                                <label for="CompanyName" class="a">ID</label>
+                                                <input type="text" class="form-control" id="CompanyName" name="id"    />
+                                            </div>
+                                            <div  class="form-group">
+                                                <label for="CompanyName" class="a">Company Name </label>
+                                                <input type="text" class="form-control" id="CompanyName" name="company_name"    />
+                                            </div>
+
+                                            <div  class="form-group">
+                                                <label for="VaccineType" class="a">Vaccine Type </label>
+                                                <div>
+                                                <lable for="Sinopharm" class="radio-inline" >  <input type="radio" name="vaccine_type" value="Sinopharm"   id="Sinopharm" class="a">Sinopharm  </lable>
+                                                <lable for="Pfizer" class="radio-inline" >  <input type="radio" name="vaccine_type"  value="Pfizer"    id="Pfizer">Pfizer </lable>
+                                                <lable for="Moderna" class="radio-inline" >  <input type="radio" name="vaccine_type" value="Moderna"    id="Moderna">Moderna  </lable>
+                                                <lable for="Sputnik'" class="radio-inline" >  <input type="radio" name="vaccine_type"  value="Sputnik"    id="Sputnik'">Sputnik  </lable>
+                                                </div>
+                                            </div>
+
+                                            <div  class="form-group">
+                                                <label for="Quantity" class="a">Quantity </label>
+                                                <input type="text" class="form-control" id="Quantity"  name="quantity"  />
+                                            </div>
+
+                                            <div  class="form-group">
+                                                <label for="StoreDate" class="a">Store Date </label>
+                                                <input type="date" class="form-control" id="StoreDate"    name="store_date"  />
+                                            </div>
+
+                                            <div  class="form-group">
+                                                <label for="ExpireDate" class="a">Expire Date </label>
+                                                <input type="date" class="form-control" id="ExpireDate"   name="expire_date"  />
+                                            </div>
+
+
+
+                                            <input type="submit"  class="btn btn-primary" value="Update">
+
+
+                                        </form>
+
+
+
+
+
+                                       
+
+
+
+                                    </div>
                                     
+                                    <div class="panel-footer text-right">
+                                        <small>&copy; Vaccine </small>
+                                    </div>
+                                  
+                                 </div>
 
-                                    <div class="card">
-        <div class="card-header">
-            <div class="card-header-left">
-               
-            </div>
-            <div class="card-header-right">
-                <ul class="list-unstyled card-option">
-                    <li><i class="fa fa fa-wrench open-card-option"></i></li>
-                    <li><i class="fa fa-window-maximize full-card"></i></li>
-                    <li><i class="fa fa-minus minimize-card"></i></li>
-                    <li><i class="fa fa-refresh reload-card"></i></li>
-                    <li><i class="fa fa-trash close-card"></i></li>
-                </ul>
-            </div>
-        </div>
-        <div class="card-block">
-            <!-- button Rounded -->
-        
-            <button class="btn btn-primary btn-round waves-effect waves-light">Add A New Vaccine Detail</button>
-           
-        </div>
-    </div>
-               
-
-    <table style="width:80%">
-  <tr>
-    <th>Company Name</th>
-    <th>Vaccine ID</th> 
-    <th>Vaccine Type</th>
-    <th>Quantity</th>
-    <th>Expire Date</th> 
-    <th>Store Date</th>
-    <th>Action</th>
-  </tr>
-  <tr>
-    <td>BLUELINE VACCINE</td>
-    <td>VID001</td>
-    <td>sinopharm</td>
-    <td>3000</td>
-    <td>21.09.2022</td>
-    <td>04.03.2022</td>
-    <td>
-        
-<button type="button  "    button class="button button1"   onclick="alert('Update')">Update</button>   
-
-   
-
-
-
-<button type="button"      button class="button button1"     onclick="alert('Delete')">Delete</button>
-        
-    </td>
-
-</table>
-
-
-    <br>
-
-                              
-
-    <div class="card">
-        <div class="card-header">
-            <div class="card-header-left">
-               
-            </div>
-            <div class="card-header-right">
-                <ul class="list-unstyled card-option">
-                    <li><i class="fa fa fa-wrench open-card-option"></i></li>
-                    <li><i class="fa fa-window-maximize full-card"></i></li>
-                    <li><i class="fa fa-minus minimize-card"></i></li>
-                    <li><i class="fa fa-refresh reload-card"></i></li>
-                    <li><i class="fa fa-trash close-card"></i></li>
-                </ul>
-            </div>
-        </div>
-        <div class="card-block">
-            <!-- button Rounded -->
-        
-            <button class="btn btn-primary btn-round waves-effect waves-light">Generate Report</button>
-           
-        </div>
-    </div>
-
-
+                             </div>
+                          </div>
 
 
 
@@ -321,6 +317,16 @@ th { background-color: lightskyblue;}
 <script src="assets/js/vertical-layout.min.js "></script>
 <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="assets/js/script.js"></script>
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
