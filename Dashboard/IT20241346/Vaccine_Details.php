@@ -167,17 +167,7 @@ th { background-color: lightskyblue;}
                                     <div class="card">
         <div class="card-header">
             <div class="card-header-left">
-               
-            </div>
-            <div class="card-header-right">
-                <ul class="list-unstyled card-option">
-                    <li><i class="fa fa fa-wrench open-card-option"></i></li>
-                    <li><i class="fa fa-window-maximize full-card"></i></li>
-                    <li><i class="fa fa-minus minimize-card"></i></li>
-                    <li><i class="fa fa-refresh reload-card"></i></li>
-                    <li><i class="fa fa-trash close-card"></i></li>
-                </ul>
-            </div>
+           
         </div>
 
       
@@ -208,7 +198,7 @@ th { background-color: lightskyblue;}
                     <th class="a">Quantity</th>
                     <th class="a">StoreDate</th>
                     <th class="a">ExpireDate</th> 
-                    <th class="a">Action</th>
+                   
                   </tr>
                 </thead>
                 <?php 
@@ -242,31 +232,35 @@ th { background-color: lightskyblue;}
                     <td>
                       <?php echo $expire_date; ?>
                     </td>
-                    <td>
-                        <div class="card-block">
-                                <!-- button Rounded -->
-    
-                                <button class="btn btn-primary btn-round waves-effect waves-light" onclick="myFunction2()">Update</button>
-       
-                        </div>
-                    <br>
-                        <div class="card-block">
-                                <!-- button Rounded -->
-    
-                                <button class="btn btn-primary btn-round waves-effect waves-light" onclick="myFunction3()">Delete</button>
-       
-                        </div>
-                    </td
-
+                   
 
 
                   </tr>
                 </tbody>
                 <?php 	} ?>
             </table>
-                </div>    
+                </div>  
+                
+                
 
     <br>
+
+    
+                        <div class="card-block">
+                                <!-- button Rounded -->
+    
+                                <button class="btn btn-primary btn-round waves-effect waves-light" onclick="myFunction2()">Update</button>
+       
+                        </div>
+                    <br> <br>
+                        <div class="card-block">
+                                <!-- button Rounded -->
+    
+                                <button class="btn btn-primary btn-round waves-effect waves-light" onclick="myFunction3()">Delete</button>
+       
+                        </div>
+                    
+
 
       
         <div class="card-block">
