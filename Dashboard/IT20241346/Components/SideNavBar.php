@@ -5,7 +5,7 @@
                               <div class="main-menu-header">
                                   <img class="img-80 img-radius" src="assets/images/avatar-5.jpg" alt="User-Profile-Image">
                                   <div class="user-details">
-                                      <span id="more-details">Chamini Sandunika<i class="fa fa-caret-down"></i></span>
+                                      <span id="more-details">Dulmi Semini<i class="fa fa-caret-down"></i></span>
                                   </div>
                               </div>
         
@@ -31,21 +31,49 @@
                               <li>
                                   <a href="sample-page.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Sample Page</span>
+                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Vaccine Stock</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                              <li class="pcoded-hasmenu active pcoded-trigger">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Assign Vaccine</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class=" ">
+                                        <a href="UsersView.php" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Assign For Vaccine </span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                    <li class=" ">
+                                        <a href="ViewAssignDetails.php" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">View Assign Details</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                
+                                    
+                                    </li>
+                    
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="pcoded-item pcoded-left-item">
+                              <li>
+                                  <a href="sample-page.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Staff</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                               </li>
                               <li>
                                   <a href="sample-page.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Sample Page</span>
-                                      <span class="pcoded-mcaret"></span>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="sample-page.php" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Sample Page</span>
+                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">User</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                               </li>

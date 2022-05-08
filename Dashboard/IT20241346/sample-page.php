@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
-    <title>Mega Able bootstrap admin template by codedthemes </title>
+    <title>Home </title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -35,6 +37,16 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+
+
+    <style>
+    .p {
+  color: black;
+  font-family: Cursive;
+  font-size: 200%;
+}
+</style>
+
 </head>
 
 <body>
@@ -113,8 +125,8 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Page Name</h5>
-                                            <p class="m-b-0">Page Description</p>
+                                            <h5 class="m-b-10">Home</h5>
+                                            <p class="m-b-0"></p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -124,7 +136,7 @@
                                             </li>
                                             <li class="breadcrumb-item"><a href="#!">Navigation</a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Page Name</a>
+                                            <li class="breadcrumb-item"><a href="#!">Home</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -137,7 +149,59 @@
                             <div class="main-body">
                                 <br><br><br>
                                     <center>              
-                                <h1>Enter Your content here</h1>
+                                <h1 class="p">  HOME  </h1> <br> <br> 
+                              
+
+                                <div class="card-block">
+                                <form action="Add_Vaccine_Details.php" method="post">
+            <!-- button Rounded -->
+            <class="c">
+            <button class="btn btn-primary btn-round waves-effect waves-light" onclick="myFunction1()">Add Vaccine Details</button>
+            
+           
+        </div> 
+        <br> <br>
+
+        
+        <div class="card-block">
+        <form action="Update Vaccine Details.php" method="post">
+            <!-- button Rounded -->
+            <class="c">
+            
+            <button class="btn btn-primary btn-round waves-effect waves-light" onclick="myFunction2()">Update Vaccine Details</button>
+           
+        </div>
+        <br> <br>
+
+
+        <div class="card-block">
+            <!-- button Rounded -->
+            <class="c">
+            <button class="btn btn-primary btn-round waves-effect waves-light" class="c" >Delete Vaccine Details </button>
+           
+        </div>
+        <br> <br>
+
+        <div class="card-block">
+            <!-- button Rounded -->
+            <class="c">
+            <button class="btn btn-primary btn-round waves-effect waves-light" class="c" >View Vaccine Details </button>
+           
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </h1>
                         </center>     
 
                             </div>
@@ -202,6 +266,7 @@
 <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
 <!-- waves js -->
 <script src="assets/pages/waves/js/waves.min.js"></script>
+<script src="navigation.js"></script>
 <!-- jquery slimscroll js -->
 <script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
 <!-- waves js -->

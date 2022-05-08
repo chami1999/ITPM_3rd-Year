@@ -29,9 +29,16 @@
                                   </a>
                               </li>
                               <li>
-                                  <a href="sample-page.php" class="waves-effect waves-dark">
+                                  <a href="create.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Sample Page</span>
+                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Create a new staff</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="view.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">view Page</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                               </li>
@@ -43,9 +50,16 @@
                                   </a>
                               </li>
                               <li>
-                                  <a href="sample-page.php" class="waves-effect waves-dark">
+                                  <a href="searchbyid.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Sample Page</span>
+                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Filter Staff</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="update.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">update Page</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                               </li>
