@@ -19,7 +19,7 @@
          $rs = mysqli_query($con, $sql);
          if($rs){
              echo '<script>alert("Updated")</script>
-              <script>location.replace("Update_Vaccine_Details.php");</script>
+              <script>location.replace("Vaccine_Details.php");</script>
              ';
          }
  

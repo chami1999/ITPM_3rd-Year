@@ -13,7 +13,7 @@ $sql = "DELETE FROM stock WHERE id='$id'";
 
 if ($conn->query($sql) === TRUE) {
   echo '<script>alert("Vaccine Details Deleted")</script>
-  <script>location.replace("Delete_Vaccine_Details.php");</script>
+  <script>location.replace("Vaccine_Details.php");</script>
   ';
 } else {
   echo "Error deleting record: " . $conn->error;
