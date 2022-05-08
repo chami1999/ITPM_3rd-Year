@@ -2,7 +2,7 @@
 include_once("dbconnect.php");
 if(isset($_POST['btn4']))
 {
-  $user_id = $_POST['user_id'];
+  $id = $_POST['user_id'];
       $name = $_POST['name'];
       $age = $_POST['age'];
       $gender = $_POST['gender'];
@@ -10,22 +10,19 @@ if(isset($_POST['btn4']))
       $dose = $_POST['dose'];
       $vaccination_date = $_POST['vaccination_date'];
 
-      if($con->connect_error){
-        die('connection faild :'.$con->connect_error);
-    }else{
-        $sql = "UPDATE vaccination_details SET ='$user_id', vaccine_type='$vaccine_type', quantity='$quantity',
-         store_date='$store_date', expire_date='$expire_date' 
-        WHERE id='$id'";
+      $sql = "UPDATE vaccination_details SET    name= '$name', age='$age', gender='$gender',
+      vaccinetype='$vaccine_type', dose='$dose' ,vaccination_date='$vaccination_date'
+     WHERE user_id='$id'";
 
-        $rs = mysqli_query($con, $sql);
-        if($rs){
-            echo '<script>alert("Updated")</script>
-             <script>location.replace("Update_Vaccine_Details.php");</script>
-            ';
-        }
-
-        $con->close();
-  
+    
+if(mysqli_query($conn, $sql)){
+   
+    header("Location: ViewAssignDetails.php");
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }
+
+
+  
 }
 ?>
