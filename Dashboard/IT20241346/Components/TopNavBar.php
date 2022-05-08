@@ -31,7 +31,7 @@
                 <li class="user-profile header-notification">
                     <a href="#!" class="waves-effect waves-light">
                         <img src="assets/images/avatar-5.jpg" class="img-radius" alt="User-Profile-Image">
-                        <span>Chamini Sandunika</span>
+                        <span>Dulmi Semini</span>
                         <i class="ti-angle-down"></i>
                     </a>
                     <ul class="show-notification profile-notification">

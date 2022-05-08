@@ -1,8 +1,18 @@
+<?php
+include_once ("dbconnect.php");
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
-    <title>Delete Vaccine Details </title>
+
+
+    <title>Add Vaccine Details </title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -36,38 +46,24 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
 
-
     <style>
-    .p {
+    .a {
   color: black;
   font-family: Cursive;
   font-size: 200%;
 }
 
-.a {
-  color: slategrey;
-  font-family:  Cursive;
-  font-size: 200%;
+.p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blue;
+    font-size: 300%;
 }
-
-.c {
-  color: lightskyblue;
-  align-self: start; 
-}
-
-
 </style>
-
-
-
-
-
 
 
 </head>
 
 <body>
-    
     <!-- Pre-loader start -->
     <div class="theme-loader">
         <div class="loader-track">
@@ -129,6 +125,7 @@
             <?php
             include('Components/TopNavBar.php');
             ?>
+            
 
             <div class="pcoded-main-container">
                 <div class="pcoded-wrapper">
@@ -143,8 +140,8 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Page Name</h5>
-                                            <p class="m-b-0">Page Description</p>
+                                            <h5 class="m-b-10">Add Vaccine Details</h5>
+                                            <p class="m-b-0"></p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -152,9 +149,9 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.html"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Visit</a>
+                                            <li class="breadcrumb-item"><a href="#!">Navigation</a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">User</a>
+                                            <li class="breadcrumb-item"><a href="#!">Home</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -166,55 +163,82 @@
                             <!-- Main-body start -->
                             <div class="main-body">
                                 <br><br><br>
-                                    <center>   
-                                    <h1 class="p">Delete Vaccine Details</h1> <br>
+                                    <center>              
+                               
+                                 <div class="container">
+                                         <div class="row col-md-6 col-md-offset-3">
+                                             <div class="panel panel-primary">
+                                                    <div class="panel-heading text-center">
+                                                            <h1 class="p"> Add Vaccine Details</h1>
+                                        </div>
+
+                                        
+                                    <div class="panel-body" >
+
+                                     
+                                        <form action="insert_vaccine.php" method="POST">
+                                            <div  class="form-group">
+                                                <label for="CompanyName" class="a">Company Name </label>
+                                                <input type="text" class="form-control" id="CompanyName" name="company_name"    />
+                                            </div>
+
+                                            <div  class="form-group">
+                                                <label for="VaccineType" class="a">Vaccine Type </label>
+                                                <div>
+                                                <lable for="Sinopharm" class="radio-inline" >  <input type="radio" name="vaccine_type" value="Sinopharm"   id="Sinopharm" class="a">Sinopharm  </lable>
+                                                <lable for="Pfizer" class="radio-inline" >  <input type="radio" name="vaccine_type"  value="Pfizer"    id="Pfizer">Pfizer </lable>
+                                                <lable for="Moderna" class="radio-inline" >  <input type="radio" name="vaccine_type" value="Moderna"    id="Moderna">Moderna  </lable>
+                                                <lable for="Sputnik'" class="radio-inline" >  <input type="radio" name="vaccine_type"  value="Sputnik"    id="Sputnik'">Sputnik  </lable>
+                                                </div>
+                                            </div>
+
+                                            <div  class="form-group">
+                                                <label for="Quantity" class="a">Quantity </label>
+                                                
+                                                <input type="text" class="form-control" id="Quantity"  name="quantity" 
+                                                 placeholder="Enter 5 digits Quantity"
+                                                
+                                                name="idNumber" pattern="{0-4}{5}"/>
+                                              
+                                            </div>
+
+
+                                            
+
+                                            <div  class="form-group">
+                                                <label for="StoreDate" class="a">Store Date </label>
+                                                <input type="date" class="form-control" id="StoreDate"    name="store_date"  />
+                                            </div>
+
+                                            <div  class="form-group">
+                                                <label for="ExpireDate" class="a">Expire Date </label>
+                                                <input type="date"  max="2022.10.17" min="2021.10.17" class="form-control" id="ExpireDate"   name="expire_date"  />
+                                            </div>
+                                            
+                                            <input type="submit"  class="btn btn-primary"  name="submit">
+
+                                        </form>
+                                      
+
+
+
+                                       
+
+
+
+                                    </div>
                                     
-                                    <form action="/Vaccine Details.php">
-  <label for="cname"    class="p" >Company Name:</label>
-  <input type="text" id="cname" name="cname" value="John" class="a"><br>
+                                    <div class="panel-footer text-right">
+                                        <small>&copy; Vaccine </small>
+                                    </div>
+                                  
+                                 </div>
 
-  <label for="vtype"  class="p">Vaccine Type:</label>
-  <input type="text" id="vtype" name="vtype" value="Doe" class="a"><br><br>
-
-  <label for="qtity"  class="p">Quantity:</label>
-  <input type="int" id="qtity" name="qtity" value="100" class="a"><br><br>
-
-  <label for="exdate"  class="p">Expire Date:</label>
-  <input type="int" id="exdate" name="exdate" value="2.09.2022" class="a"><br><br>
-
-  <label for="sdate"  class="p">Store Date:</label>
-  <input type="int" id="sdate" name="sdate" value="2.09.2022" class="a"><br><br>
-
-
-  <div class="card-block">
-            <!-- button Rounded -->
-            <class="c">
-            <button class="btn btn-primary btn-round waves-effect waves-light" class="c" >Delete </button>
-           
-        </div>
-    
-<br>
-    
-        <div class="card-block">
-            <!-- button Rounded -->
-        
-            <button class="btn btn-primary btn-round waves-effect waves-light" class="c" >Reset </button>
-           
-        </div>
-    
-
-
-</form> 
-
-   
+                             </div>
+                          </div>
 
 
 
-
-
-
-
-                              
                         </center>     
 
                             </div>
@@ -246,6 +270,7 @@
                 <a href="https://www.mozilla.org/en-US/firefox/new/">
                     <img src="assets/images/browser/firefox.png" alt="Firefox">
                     <div>Firefox</div>
+
                 </a>
             </li>
             <li>
@@ -295,6 +320,16 @@
 <script src="assets/js/vertical-layout.min.js "></script>
 <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="assets/js/script.js"></script>
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>

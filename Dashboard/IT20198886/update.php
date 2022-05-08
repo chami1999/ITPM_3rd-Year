@@ -2,16 +2,18 @@
 include_once("dbconnect.php");
 if(isset($_POST['btn4']))
 {
-  $id = $_POST['user_id'];
+      $user_id=$_POST['user_id'];
       $name = $_POST['name'];
       $age = $_POST['age'];
       $gender = $_POST['gender'];
-      $vaccine_type = $_POST['vaccinetype'];
+      $vaccine_type = $_POST['vaccine_type'];
       $dose = $_POST['dose'];
       $vaccination_date = $_POST['vaccination_date'];
 
-      mysqli_query($conn,"UPDATE vaccination_details set id='" . $_POST['user_id'] . "' ,name='" . $_POST['name'] . "',age='" . $_POST['age'] . "',gender='" . $_POST['gender'] . "',vaccine_type='" . $_POST['vaccinetype'] . "',vaccination_date='" . $_POST['vaccination_date'] . "' WHERE user_Id='" . $_POST['user_id'] . "'");
+      $sql = "UPDATE vaccination_details SET name='$name', age='$age', gender='$gender', vaccine_type='$vaccine_type', dose='$dose', vaccination_date='$vaccination_date' WHERE user_id='$user_id'";
 
+     
+    
 if(mysqli_query($conn, $sql)){
    
     header("Location: ViewAssignDetails.php");
