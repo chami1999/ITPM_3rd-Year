@@ -43,14 +43,14 @@
                                 </a>
                                 <ul class="pcoded-submenu">
                                     <li class=" ">
-                                        <a href="UsersView.php" class="waves-effect waves-dark">
+                                        <a href="http://localhost/ITPM_3rdYear/Dashboard/IT20198886/UsersView.php" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                             <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Assign For Vaccine </span>
                                             <span class="pcoded-mcaret"></span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="ViewAssignDetails.php" class="waves-effect waves-dark">
+                                        <a href="http://localhost/ITPM_3rdYear/Dashboard/IT20198886/ViewAssignDetails.php" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                             <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">View Assign Details</span>
                                             <span class="pcoded-mcaret"></span>
@@ -64,7 +64,7 @@
                         </ul>
                         <ul class="pcoded-item pcoded-left-item">
                               <li>
-                                  <a href="sample-page.php" class="waves-effect waves-dark">
+                                  <a href="http://localhost/ITPM_3rdYear/Dashboard/IT20189976/view.php"  class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.form-components.main">Staff</span>
                                       <span class="pcoded-mcaret"></span>

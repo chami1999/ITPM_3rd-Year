@@ -29,7 +29,7 @@
                                   </a>
                               </li>
                               <li>
-                                  <a href="sample-page.php" class="waves-effect waves-dark">
+                                  <a href="http://localhost/ITPM_3rdYear/Dashboard/IT20241346/sample-page.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.form-components.main">Vaccine Stock</span>
                                       <span class="pcoded-mcaret"></span>
@@ -64,7 +64,7 @@
                         </ul>
                         <ul class="pcoded-item pcoded-left-item">
                               <li>
-                                  <a href="sample-page.php" class="waves-effect waves-dark">
+                                  <a href="http://localhost/ITPM_3rdYear/Dashboard/IT20189976/view.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.form-components.main">Staff</span>
                                       <span class="pcoded-mcaret"></span>
