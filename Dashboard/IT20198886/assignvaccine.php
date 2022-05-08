@@ -1,3 +1,6 @@
+<?php
+include_once("dbconnect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +38,8 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/IT20198886.css">
+
 </head>
 
 <body>
@@ -113,8 +118,8 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Page Name</h5>
-                                            <p class="m-b-0">Page Description</p>
+                                            <h5 class="m-b-10">Assign For Vaccination </h5>
+                                            <p class="m-b-0">You can assign vaccine details for users</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -122,34 +127,130 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.html"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Navigation</a>
+                                            <li class="breadcrumb-item"><a href="#!">Assign Vaccine </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Page Name</a>
+                                            <li class="breadcrumb-item"><a href="#!">Add Vaccine</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
+                          
                         </div>
                         <!-- Page-header end -->
                         <div class="pcoded-inner-content">
                             <!-- Main-body start -->
-                            <div class="main-body">
-                                <br><br><br>
-                                    <center>              
-                                <h1>Enter Your content here</h1>
-                        </center>     
+                            <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Assign Details</h5>
+                                                        <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
+                                                    </div>
+                                                    <?php
+                                                    $user_id = $_GET['user_id'];
+                                                $sql="SELECT * FROM user_details where user_id='$user_id'";
+                                                $result = $conn->query($sql);
+                                                while ($row1 = $result->fetch_assoc()) {
+                                                    $name = $row1["user_name"];
+                                                    $age = $row1["age"];
+                                                    $gender = $row1["gender"];
+                                                
+                                                ?>
+                                                <?php
+                                                }
+                                                
+                                                ?>
+                            <div class="card-block">
+                                                        <form class="form-material" action="insert.php" method="post">
+                                                            <div class="form-group form-default">
+                                                                <input type=hidden name="user_id" value="<?php echo  $user_id;?>">
+                                                                <input type="text" name="name" class="form-control" required="" value="<?php echo  $name;?>">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">Name</label>
+                                                            </div>
+                                                            <div class="form-group form-default">
+                                                                <input type="text" name="age" class="form-control" required="" value="<?php echo  $age;?>">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">Age (exa@gmail.com)</label>
+                                                            </div>
+                                                            <div class="form-group form-default">
+                                                                <input type="text" name="gender" class="form-control" required=""value="<?php echo  $gender;?>">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">Gender</label>
+                                                            
+                                                            </div>
+                                                            <?php
+                                            
+                                                            ?>
+                                                            <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Vaccine Type</label>
+                                                                    <div class="col-sm-10">
+                                                                        <select name="vaccinetype" class="form-control" required>
+                                                                        <option value="opt1" ></option>
+                                                                            <option value="Moderna">Moderna</option>
+                                                                            <option value="Pfizer">Pfizer</option>
+                                                                            <option value="Sinopharm">Sinopharm</option>
+                                                                            <option value="Sputnic">Sputnic</option>
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+  
+                                                            <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Dose</label>
+                                                                    <div class="col-sm-10">
+                                                                        <select name="dose" class="form-control">
+                                                                            <option value="opt1"></option>
+                                                                            <option value="1st Dose">1st Dose</option>
+                                                                            <option value="2nd Dose">2nd Dose</option>
+                                                                            <option value="Booster">Booster</option>
+                                                                            <
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                               
+                                                                <div class="form-group row">
+                                                                  <label class="col-sm-2 col-form-label" >Date</label>
+                                                                  <div class="col-sm-10">
+            <!-- <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/> -->
+                                                                 <input type="date" class="form-control datepicker" id="vaccination_date"  name="vaccination_date"required="">
+                                                                  </div>
+                                                                </div>
+                                                                <script>
+    function successmsg() {
 
-                            </div>
-                          
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        var date = document.getElementById("vaccination_date").value;
+        var varDate = new Date(date); //dd-mm-YYYY
+        var today = new Date();
+
+        if (date == "") {
+            alert("Successfully Vaccination Details Added.");
+            return true;
+        } else {
 
 
+            if (varDate >= today) {
+                alert("Successfully Vaccination Details Added.");
+                return true;
+            } else {
+                alert("Something going to wrong.");
+                return false;
+
+            }
+        }
+
+    }
+</script>
+                                                         
+                                                            <div class="table-responsive">
+                                                    <table class="table1"  align="right" >
+                                                        <tr>
+                                                            <td  width:"50px"><input type="submit" class="btn4" name="btn4" value="Confirm"></td>
+                                                            <td> 
+                                                                          <input type="submit" class="btn4" value="Clear"></td>
+                                                    </tr>
+                                                    </table>
+                                                   </div>
+                                                     </form>
 
     <!-- Warning Section Starts -->
     <!-- Older IE warning message -->
