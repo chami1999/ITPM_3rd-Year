@@ -199,7 +199,7 @@ include_once("dbconnect.php");
                                                             <div class="form-group row">
                                                                     <label class="col-sm-2 col-form-label">Dose</label>
                                                                     <div class="col-sm-10">
-                                                                        <select name="select" class="form-control"id="dose">
+                                                                        <select name="dose" class="form-control"id="dose">
                                                                             <option value="opt1"></option>
                                                                             <option value="opt2">1st Dose</option>
                                                                             <option value="opt3">2nd Dose</option>
