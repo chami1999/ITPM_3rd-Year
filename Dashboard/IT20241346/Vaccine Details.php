@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
-    <title>Home </title>
+    <title>Vaccine Details</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -37,6 +35,20 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+
+    <style>
+table, th, td {
+  border: 1px solid black;
+}
+th { background-color: lightskyblue;}
+
+.button1 {background-color: #4CAF50;} 
+
+
+</style>
+
+
+
 </head>
 
 <body>
@@ -115,8 +127,8 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Page Name</h5>
-                                            <p class="m-b-0">Page Description</p>
+                                            <h5 class="m-b-10">Vaccine Details</h5>
+                                            <p class="m-b-0"></p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -124,9 +136,9 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.html"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Navigation</a>
+                                            <li class="breadcrumb-item"><a href="#!">Home</a> 
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Page Name</a>
+                                            <li class="breadcrumb-item"><a href="#!">Vaccine Details</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -138,27 +150,97 @@
                             <!-- Main-body start -->
                             <div class="main-body">
                                 <br><br><br>
-                                    <center>              
-                                <h1>  HOME  </h1> <br> <br> 
+                                    <center>   
+                                        
+                                    
 
-                               <h2  > Add Vaccine Details   </h2> <br> 
-                               <h2> Update Vaccine Details </h2> <br>
-                              <h2>  Delete Vaccine Details </h2> <br>
-                               <h2> View Vaccine Details </h2> <br>
+                                    <div class="card">
+        <div class="card-header">
+            <div class="card-header-left">
+               
+            </div>
+            <div class="card-header-right">
+                <ul class="list-unstyled card-option">
+                    <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                    <li><i class="fa fa-window-maximize full-card"></i></li>
+                    <li><i class="fa fa-minus minimize-card"></i></li>
+                    <li><i class="fa fa-refresh reload-card"></i></li>
+                    <li><i class="fa fa-trash close-card"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-block">
+            <!-- button Rounded -->
+        
+            <button class="btn btn-primary btn-round waves-effect waves-light">Add A New Vaccine Detail</button>
+           
+        </div>
+    </div>
+               
+
+    <table style="width:80%">
+  <tr>
+    <th>Company Name</th>
+    <th>Vaccine ID</th> 
+    <th>Vaccine Type</th>
+    <th>Quantity</th>
+    <th>Expire Date</th> 
+    <th>Store Date</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td>BLUELINE VACCINE</td>
+    <td>VID001</td>
+    <td>sinopharm</td>
+    <td>3000</td>
+    <td>21.09.2022</td>
+    <td>04.03.2022</td>
+    <td>
+        
+<button type="button  "    button class="button button1"   onclick="alert('Update')">Update</button>   
+
+   
+
+
+
+<button type="button"      button class="button button1"     onclick="alert('Delete')">Delete</button>
+        
+    </td>
+
+</table>
+
+
+    <br>
+
+                              
+
+    <div class="card">
+        <div class="card-header">
+            <div class="card-header-left">
+               
+            </div>
+            <div class="card-header-right">
+                <ul class="list-unstyled card-option">
+                    <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                    <li><i class="fa fa-window-maximize full-card"></i></li>
+                    <li><i class="fa fa-minus minimize-card"></i></li>
+                    <li><i class="fa fa-refresh reload-card"></i></li>
+                    <li><i class="fa fa-trash close-card"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-block">
+            <!-- button Rounded -->
+        
+            <button class="btn btn-primary btn-round waves-effect waves-light">Generate Report</button>
+           
+        </div>
+    </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-                                </h1>
                         </center>     
 
                             </div>

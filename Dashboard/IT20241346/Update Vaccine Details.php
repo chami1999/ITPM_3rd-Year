@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
-    <title>Home </title>
+    <title>Update Vaccine Details </title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -37,9 +35,39 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+
+
+    <style>
+    .p {
+  color: black;
+  font-family: Cursive;
+  font-size: 200%;
+}
+
+.a {
+  color: slategrey;
+  font-family:  Cursive;
+  font-size: 200%;
+}
+
+.c {
+  color: lightskyblue;
+  align-self: start; 
+}
+
+
+</style>
+
+
+
+
+
+
+
 </head>
 
 <body>
+    
     <!-- Pre-loader start -->
     <div class="theme-loader">
         <div class="loader-track">
@@ -124,9 +152,9 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.html"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Navigation</a>
+                                            <li class="breadcrumb-item"><a href="#!">Visit</a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Page Name</a>
+                                            <li class="breadcrumb-item"><a href="#!">User</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -138,13 +166,47 @@
                             <!-- Main-body start -->
                             <div class="main-body">
                                 <br><br><br>
-                                    <center>              
-                                <h1>  HOME  </h1> <br> <br> 
+                                    <center>   
+                                    <h1 class="p">Update Vaccine Details</h1> <br>
+                                    
+                                    <form action="/Vaccine Details.php">
+  <label for="cname"    class="p" >Company Name:</label>
+  <input type="text" id="cname" name="cname" value="John" class="a"><br>
 
-                               <h2  > Add Vaccine Details   </h2> <br> 
-                               <h2> Update Vaccine Details </h2> <br>
-                              <h2>  Delete Vaccine Details </h2> <br>
-                               <h2> View Vaccine Details </h2> <br>
+  <label for="vtype"  class="p">Vaccine Type:</label>
+  <input type="text" id="vtype" name="vtype" value="Doe" class="a"><br><br>
+
+  <label for="qtity"  class="p">Quantity:</label>
+  <input type="int" id="qtity" name="qtity" value="100" class="a"><br><br>
+
+  <label for="exdate"  class="p">Expire Date:</label>
+  <input type="int" id="exdate" name="exdate" value="2.09.2022" class="a"><br><br>
+
+  <label for="sdate"  class="p">Store Date:</label>
+  <input type="int" id="sdate" name="sdate" value="2.09.2022" class="a"><br><br>
+
+
+  <div class="card-block">
+            <!-- button Rounded -->
+            <class="c">
+            <button class="btn btn-primary btn-round waves-effect waves-light" class="c" >Update </button>
+           
+        </div>
+    
+<br>
+    
+        <div class="card-block">
+            <!-- button Rounded -->
+        
+            <button class="btn btn-primary btn-round waves-effect waves-light" class="c" >Reset </button>
+           
+        </div>
+    
+
+
+</form> 
+
+   
 
 
 
@@ -152,13 +214,7 @@
 
 
 
-
-
-
-
-
-
-                                </h1>
+                              
                         </center>     
 
                             </div>
