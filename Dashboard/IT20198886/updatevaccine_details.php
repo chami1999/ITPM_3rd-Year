@@ -185,7 +185,7 @@ include_once("dbconnect.php");
                                                                 <div class="form-group row">
                                                                     <label class="col-sm-2 col-form-label">Vaccine Type</label>
                                                                     <div class="col-sm-10">
-                                                                        <select name="vaccinetype" class="form-control"id="vaccinetype">
+                                                                        <select name="vaccine_type" class="form-control"id="vaccinetype">
                                                                         <option value="opt1" ></option>
                                                                             <option value="Moderna">Moderna</option>
                                                                             <option value="Pfizer">Pfizer</option>
@@ -201,9 +201,9 @@ include_once("dbconnect.php");
                                                                     <div class="col-sm-10">
                                                                         <select name="dose" class="form-control"id="dose">
                                                                             <option value="opt1"></option>
-                                                                            <option value="opt2">1st Dose</option>
-                                                                            <option value="opt3">2nd Dose</option>
-                                                                            <option value="opt4">Booster</option>
+                                                                            <option value="1st Dose">1st Dose</option>
+                                                                            <option value="2nd Dose">2nd Dose</option>
+                                                                            <option value="Booster">Booster</option>
                                                                             
                                                                         </select>
                                                                     </div>
