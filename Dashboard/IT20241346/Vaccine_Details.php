@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 
 <head>
-    <title>Add Vaccine Details </title>
+    <title>Vaccine Details</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -36,38 +37,31 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
 
-
     <style>
-    .p {
-  color: black;
-  font-family: Cursive;
-  font-size: 200%;
+table, th, td {
+  border: 1px solid black;
 }
+th { background-color: lightskyblue;}
+
+.button1 {background-color: #4CAF50;} 
+
 
 .a {
-  color: slategrey;
-  font-family:  Cursive;
-  font-size: 200%;
+  color: black;
+  font-family: Cursive;
+  font-size: 150%;
 }
-
-.c {
-  color: lightskyblue;
-  align-self: start; 
-}
-
 
 </style>
-
-
-
-
 
 
 
 </head>
 
 <body>
-    
+
+
+
     <!-- Pre-loader start -->
     <div class="theme-loader">
         <div class="loader-track">
@@ -143,8 +137,8 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Page Name</h5>
-                                            <p class="m-b-0">Page Description</p>
+                                            <h5 class="m-b-10">Vaccine Details</h5>
+                                            <p class="m-b-0"></p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -152,9 +146,9 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.html"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Visit</a>
+                                            <li class="breadcrumb-item"><a href="#!">Home</a> 
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">User</a>
+                                            <li class="breadcrumb-item"><a href="#!">Vaccine Details</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -167,54 +161,127 @@
                             <div class="main-body">
                                 <br><br><br>
                                     <center>   
-                                    <h1 class="p">Add Vaccine Details</h1> <br>
+                                        
                                     
-                                    <form action="Vaccine Details.php" method="post">
-  <label for="cname"    class="p" >Company Name:</label>
-  <input type="text" id="cname" name="cname" value="John" class="a" ><br>
 
-  <label for="vtype"  class="p">Vaccine Type:</label>
-  <input type="text" id="vtype" name="vtype" value="Doe" class="a"><br><br>
-
-  <label for="qtity"  class="p">Quantity:</label>
-  <input type="int" id="qtity" name="qtity" value="100" class="a"><br><br>
-
-  <label for="exdate"  class="p">Expire Date:</label>
-  <input type="int" id="exdate" name="exdate" value="2.09.2022" class="a"><br><br>
-
-  <label for="sdate"  class="p">Store Date:</label>
-  <input type="int" id="sdate" name="sdate" value="2.09.2022" class="a"><br><br>
-
-
-  <div class="card-block">
-            <!-- button Rounded -->
-            <class="c">
-            <button class="btn btn-primary btn-round waves-effect waves-light" class="c" >Add </button>
-           
+                                    <div class="card">
+        <div class="card-header">
+            <div class="card-header-left">
+               
+            </div>
+            <div class="card-header-right">
+                <ul class="list-unstyled card-option">
+                    <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                    <li><i class="fa fa-window-maximize full-card"></i></li>
+                    <li><i class="fa fa-minus minimize-card"></i></li>
+                    <li><i class="fa fa-refresh reload-card"></i></li>
+                    <li><i class="fa fa-trash close-card"></i></li>
+                </ul>
+            </div>
         </div>
-    
-<br>
-    
+
+      
         <div class="card-block">
             <!-- button Rounded -->
         
-            <button class="btn btn-primary btn-round waves-effect waves-light" class="c" >Reset </button>
+            <button class="btn btn-primary btn-round waves-effect waves-light" onclick="myFunction1()">Add A New Vaccine Detail</button>
            
         </div>
-    
-
-
-</form> 
+    </div>
+  
 
    
 
+<?php 
+  include("dbconnect.php");
+?>
+
+<div class="table-placeholder" id="div1">
+<button onclick="printContent('div1')" class="btn btn-primary m-3 border border-dark">Print</button>
+<button onclick="window.print()">Print this page</button>
+            <table class="table">
+                <thead>
+                  <tr>
+                  <th class="a">Vaccine ID</th>
+                <th class="a">CompanyName</th> 
+                    <th class="a">VaccineType</th>
+                    <th class="a">Quantity</th>
+                    <th class="a">StoreDate</th>
+                    <th class="a">ExpireDate</th> 
+                    <th class="a">Action</th>
+                  </tr>
+                </thead>
+                <?php 
+	              $query = mysqli_query($db, "SELECT * FROM stock");
+                while($row = mysqli_fetch_array($query)){
+                    
+                    $id = $row['id'];
+                    $company_name = $row['company_name'];
+                    $vaccine_type = $row['vaccine_type'];
+                    $quantity = $row['quantity'];
+                    $store_date = $row['store_date'];
+                    $expire_date = $row['expire_date'];
+               ?>
+                <tbody>
+                  <tr>
+                    <td>
+                      <?php echo $id; ?>
+                    </td>
+                    <td>
+                      <?php echo $company_name; ?>
+                    </td>
+                    <td>
+                      <?php echo $vaccine_type; ?>
+                    </td>
+                    <td>
+                      <?php echo $quantity; ?>
+                    </td>
+                    <td>
+                      <?php echo $store_date; ?>
+                    </td>
+                    <td>
+                      <?php echo $expire_date; ?>
+                    </td>
+                    <td>
+                        <div class="card-block">
+                                <!-- button Rounded -->
+    
+                                <button class="btn btn-primary btn-round waves-effect waves-light" onclick="myFunction2()">Update</button>
+       
+                        </div>
+                    <br>
+                        <div class="card-block">
+                                <!-- button Rounded -->
+    
+                                <button class="btn btn-primary btn-round waves-effect waves-light" onclick="myFunction3()">Delete</button>
+       
+                        </div>
+                    </td
+
+
+
+                  </tr>
+                </tbody>
+                <?php 	} ?>
+            </table>
+                </div>    
+
+    <br>
+
+      
+        <div class="card-block">
+            <!-- button Rounded -->
+        
+            
+           
+        </div>
+    </div>
+    <br>
+    
 
 
 
 
-
-
-                              
                         </center>     
 
                             </div>
@@ -225,6 +292,7 @@
             </div>
         </div>
     </div>
+    
 
 
 
@@ -278,6 +346,7 @@
 <script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
 <!-- waves js -->
+<script src="navigation.js"></script>
 <script src="assets/pages/waves/js/waves.min.js"></script>
 <!-- jquery slimscroll js -->
 <script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
@@ -295,6 +364,13 @@
 <script src="assets/js/vertical-layout.min.js "></script>
 <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="assets/js/script.js"></script>
+
+
+
+
+
+
+
 </body>
 
 </html>
