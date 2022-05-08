@@ -6,7 +6,7 @@ $username = "root";
 
 $password = ""; 
 
-$dbname = "mydb"; 
+$dbname = "blueline_vaccine"; 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
